@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+ 
 function App() {
+ 
+  const [displayMessage, setDisplayMessage] = React.useState(false);
+  const [name, setName] = React.useState("");
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <label htmlFor="name">Name</label>
+      <input id="name" type="text" onChange={(event) => setName(event.currentTarget.value)} />
+      <button onClick={() => setDisplayMessage(true)}>Submit</button>
+      
+      {displayMessage && <p>{`Hello, ${name}!`}</p>}
     </div>
   );
 }
-
+ 
 export default App;

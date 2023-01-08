@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+
  
 function App() {
  
@@ -7,8 +7,8 @@ function App() {
   const [name, setName] = React.useState("");
  
   return (
-    <div className="App">
-      <p>Yo</p>
+    <div className="Component1">
+      component!!
     </div>
   );
 }

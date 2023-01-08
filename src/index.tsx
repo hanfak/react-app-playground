@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Link}
+    from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Tdd from './Tdd';
+
+import Component1 from './Component1';
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <Router>
+      <Routes>
+          <Route path='/tdd' element={<Tdd/>} />
+          <Route path='/comp' element={<Component1/>} />
+      </Routes>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
